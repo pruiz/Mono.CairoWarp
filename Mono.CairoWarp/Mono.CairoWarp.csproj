@@ -45,10 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CairoExtensions.cs" />
+    <Compile Include="WarpBilinear.cs" />
+    <Compile Include="DotNetMatrix\CholeskyDecomposition.cs" />
+    <Compile Include="DotNetMatrix\EigenvalueDecomposition.cs" />
+    <Compile Include="DotNetMatrix\GeneralMatrix.cs" />
+    <Compile Include="DotNetMatrix\LUDecomposition.cs" />
+    <Compile Include="DotNetMatrix\QRDecomposition.cs" />
+    <Compile Include="DotNetMatrix\SingularValueDecomposition.cs" />
     <Compile Include="NativePath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Warp.cs" />
     <Compile Include="WarpCurl.cs" />
+    <Compile Include="WarpPerspective.cs" />
     <Compile Include="WarpSpiral.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
