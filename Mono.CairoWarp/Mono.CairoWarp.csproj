@@ -40,12 +40,13 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CairoExtensions.cs" />
+    <Compile Include="CairoStreamReader.cs" />
+    <Compile Include="CairoStreamWriter.cs" />
     <Compile Include="WarpBilinear.cs" />
     <Compile Include="DotNetMatrix\CholeskyDecomposition.cs" />
     <Compile Include="DotNetMatrix\EigenvalueDecomposition.cs" />
