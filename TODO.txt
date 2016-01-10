@@ -1,7 +1,4 @@
 TODO
 ====
 
-- Add dependencies to solution.
-- Create a NuGet package. 
-  - Maybe even an independen NuGet package for Mono.Cairo.
-- Support x64 as well.
+- Support x64 as well. (This may work, but it is not tested)
