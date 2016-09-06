@@ -45,13 +45,13 @@ namespace CairoWarp
 
 		public static cairo_path_data_header_t GetPathHeader(this cairo_path_t path, int offset)
 		{
-			var hdr_ptr = new IntPtr(path.data.ToInt32() + (_point_sz * offset));
+			var hdr_ptr = IntPtr.Add(path.data, (_point_sz * offset));
 			return (cairo_path_data_header_t)Marshal.PtrToStructure(hdr_ptr, typeof(cairo_path_data_header_t));
 		}
 
 		public static PointD GetPathPoint(this cairo_path_t path, int offset)
 		{
-			var ptr = new IntPtr(path.data.ToInt32() + (_point_sz * offset));
+			var ptr = IntPtr.Add(path.data, (_point_sz * offset));
 			var points = (cairo_path_data_points_t)Marshal.PtrToStructure(ptr, typeof(cairo_path_data_points_t));
 
 			return new PointD(points.X, points.Y);
