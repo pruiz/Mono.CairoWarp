@@ -18,7 +18,6 @@
     <Authors>pruiz,x509whatever</Authors>
     <RepositoryUrl>https://github.com/pruiz/Mono.CairoWarp</RepositoryUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
     <PackageReleaseNotes>See changes for this revision at: http://github.com/pruiz/Mono.CairoWarp/commit/GIT_COMMIT</PackageReleaseNotes>
     <Description>Mono.Cairo image warp effects/extensions</Description>
     <Copyright>Copyright Pablo Ruiz García  2013~2025</Copyright>
