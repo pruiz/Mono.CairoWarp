@@ -1,8 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
@@ -73,14 +70,22 @@ namespace CairoWarp
 		}
 
 		#region Native Calls
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		private delegate Status cairo_read_func_t(IntPtr closure, IntPtr data, uint length);
 
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		internal delegate Status cairo_read_func_t(IntPtr closure, IntPtr data, uint length);
+
+#if NET40
 		[DllImport("libcairo-2.dll")]
 		private static extern IntPtr cairo_image_surface_create_from_png_stream(
 			[MarshalAs(UnmanagedType.FunctionPtr)] cairo_read_func_t cb,
 			IntPtr closure
 		);
+#else
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		internal delegate IntPtr d_cairo_image_surface_create_from_png_stream(cairo_read_func_t read_func, IntPtr closure);
+		internal static d_cairo_image_surface_create_from_png_stream cairo_image_surface_create_from_png_stream =
+			NativeMethods.LoadFunction<d_cairo_image_surface_create_from_png_stream>("cairo_image_surface_create_from_png_stream");
+#endif
 		#endregion
 	}
 }

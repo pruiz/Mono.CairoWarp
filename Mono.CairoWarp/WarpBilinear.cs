@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 using Cairo;
 
@@ -19,9 +18,6 @@ namespace CairoWarp
 		{
 			if (destPoints == null || destPoints.Count() != 4)
 				throw new ArgumentException("destPoints");
-
-			if (srcRect == null)
-				throw new ArgumentNullException("srcRect");
 
 			_pntSrc[0].X = _pntSrc[2].X = srcRect.GetLeft();
 			_pntSrc[1].X = _pntSrc[3].X = srcRect.GetRight();

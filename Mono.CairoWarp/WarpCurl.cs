@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Cairo;
 
@@ -14,9 +11,6 @@ namespace CairoWarp
 
 		public WarpCurl(TextExtents text, Rectangle rect)
 		{
-			if (text == null) throw new ArgumentNullException("text");
-			if (rect == null) throw new ArgumentNullException("rect");
-
 			_rect = rect;
 			_extents = text;
 		}

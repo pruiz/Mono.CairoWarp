@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Cairo;
 
@@ -13,9 +10,6 @@ namespace CairoWarp
 
 		public WarpSpiral(Rectangle rect)
 		{
-			if (rect == null)
-				throw new ArgumentNullException("rect");
-
 			_rect = rect;
 		}
 

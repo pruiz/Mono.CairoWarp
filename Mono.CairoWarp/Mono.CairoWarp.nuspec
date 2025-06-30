@@ -3,7 +3,7 @@
 	<metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 		<id>Mono.CairoWarp</id>
 		<version>0.0.0.0</version>
-		<authors>pruiz</authors>
+		<authors>pruiz,x509whatever</authors>
 		<owners>pruiz</owners>
 		<projectUrl>https://github.com/pruiz/Mono.CairoWarp</projectUrl>
 		<licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
@@ -11,12 +11,13 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<releaseNotes>See changes for this revision at: http://github.com/pruiz/Mono.CairoWarp/commit/GIT_COMMIT </releaseNotes>
 		<description>Mono.Cairo image warp effects/extensions</description>
-		<copyright>Copyright Pablo Ruiz García  2013~2015</copyright>
-		<tags>Cairo Linux Mono</tags>
+		<copyright>Copyright Pablo Ruiz García  2013~2025</copyright>
+		<tags>Cairo Linux Mono net8</tags>
 		<dependencies/>
 	</metadata>
 	<files>
-		<file src="bin\Release\Mono.CairoWarp.*" target="lib" />
+		<file src="bin\Release\net40\Mono.CairoWarp.*" target="lib\net40\" />
+		<file src="bin\Release\net8.0\Mono.CairoWarp.*" target="lib\net8.0\" />
 		<file src="**\*.cs" target="src" />
 	</files>
 </package>
