@@ -14,9 +14,9 @@ before_build:
       setlocal EnableExtensions
 
       REM Set version attributes..
-      Tools\UnixUtils\sed.exe -i -e "s|0\.0\.0\.0|%APPVEYOR_BUILD_VERSION%|g" Mono.CairoWarp\Properties\AssemblyInfo.cs
-      Tools\UnixUtils\sed.exe -i -e "s|GIT_COMMIT|%APPVEYOR_REPO_COMMIT%|g" Mono.CairoWarp\Properties\AssemblyInfo.cs
-      Tools\UnixUtils\sed.exe -i -e "s|VERSION_STRING|%APPVEYOR_REPO_BRANCH%:%APPVEYOR_REPO_COMMIT%|g" Mono.CairoWarp\Properties\AssemblyInfo.cs
+      Tools\UnixUtils\sed.exe -i -e "s|0\.0\.0\.0|%APPVEYOR_BUILD_VERSION%|g" Mono.CairoWarp\Mono.CairoWarp.csproj
+      Tools\UnixUtils\sed.exe -i -e "s|GIT_COMMIT|%APPVEYOR_REPO_COMMIT%|g" Mono.CairoWarp\Mono.CairoWarp.csproj
+      Tools\UnixUtils\sed.exe -i -e "s|VERSION_STRING|%APPVEYOR_REPO_BRANCH%:%APPVEYOR_REPO_COMMIT%|g" Mono.CairoWarp\Mono.CairoWarp.csproj
 
       REM Restoring NuGet packages..
       appveyor-retry nuget restore
