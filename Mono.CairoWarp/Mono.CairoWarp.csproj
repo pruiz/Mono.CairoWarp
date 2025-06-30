@@ -1,73 +1,43 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{ACFCEA68-1F8C-4797-9CB6-5D9A6884F016}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CairoWarp</RootNamespace>
     <AssemblyName>Mono.CairoWarp</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <ProjectGuid>824d24e8-64e8-488e-909c-c60b3ec09235</ProjectGuid>
+    <TargetFrameworks>net40;net8.0</TargetFrameworks>
+    <!-- Some assembly and package stuff to be patched on build -->
+    <Version>0.0.0.0</Version>
+    <FileVersion>0.0.0.0</FileVersion>
+    <PackageVersion>0.0.0</PackageVersion>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <InformationalVersion>VERSION_STRING</InformationalVersion>
+    <Title>Mono.CairoWarp</Title>
+    <PackageId>Mono.CairoWarp</PackageId>
+    <Authors>pruiz,x509whatever</Authors>
+    <RepositoryUrl>https://github.com/pruiz/Mono.CairoWarp</RepositoryUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReleaseNotes>See changes for this revision at: http://github.com/pruiz/Mono.CairoWarp/commit/GIT_COMMIT</PackageReleaseNotes>
+    <Description>Mono.Cairo image warp effects/extensions</Description>
+    <Copyright>Copyright Pablo Ruiz García  2013~2025</Copyright>
+    <PackageTags>Cairo Linux Mono net8</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
     <Reference Include="Mono.Cairo, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\Mono.Cairo.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="CairoExtensions.cs" />
-    <Compile Include="CairoStreamReader.cs" />
-    <Compile Include="CairoStreamWriter.cs" />
-    <Compile Include="WarpBilinear.cs" />
-    <Compile Include="DotNetMatrix\CholeskyDecomposition.cs" />
-    <Compile Include="DotNetMatrix\EigenvalueDecomposition.cs" />
-    <Compile Include="DotNetMatrix\GeneralMatrix.cs" />
-    <Compile Include="DotNetMatrix\LUDecomposition.cs" />
-    <Compile Include="DotNetMatrix\QRDecomposition.cs" />
-    <Compile Include="DotNetMatrix\SingularValueDecomposition.cs" />
-    <Compile Include="NativePath.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Warp.cs" />
-    <Compile Include="WarpCurl.cs" />
-    <Compile Include="WarpPerspective.cs" />
-    <Compile Include="WarpSpiral.cs" />
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <PackageReference Include="CairoSharp" Version="3.24.24.95" />
   </ItemGroup>
+
   <ItemGroup>
     <None Include="Mono.CairoWarp.nuspec" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
