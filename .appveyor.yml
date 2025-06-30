@@ -28,7 +28,7 @@ build:
 deploy:
   - provider: NuGet
     api_key:
-      secure: NoKeyNoParty
+      secure: C8aAAWoEIAKuTkv4SMXdjFwjMiXiQuAV16SdT2dvARyJ2TOE26wkmqZ+bNg2lEE+
     on:
       branch: master
 notifications:

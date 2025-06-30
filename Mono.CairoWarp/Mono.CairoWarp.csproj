@@ -5,7 +5,7 @@
     <RootNamespace>CairoWarp</RootNamespace>
     <AssemblyName>Mono.CairoWarp</AssemblyName>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ProjectGuid>824d24e8-64e8-488e-909c-c60b3ec09235</ProjectGuid>
     <TargetFrameworks>net40;net8.0</TargetFrameworks>
     <!-- Some assembly and package stuff to be patched on build -->
     <Version>0.0.0.0</Version>
@@ -13,6 +13,7 @@
     <PackageVersion>0.0.0</PackageVersion>
     <AssemblyVersion>0.0.0.0</AssemblyVersion>
     <InformationalVersion>VERSION_STRING</InformationalVersion>
+    <Title>Mono.CairoWarp</Title>
     <PackageId>Mono.CairoWarp</PackageId>
     <Authors>pruiz,x509whatever</Authors>
     <RepositoryUrl>https://github.com/pruiz/Mono.CairoWarp</RepositoryUrl>
